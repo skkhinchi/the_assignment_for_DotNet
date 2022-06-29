@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 
 namespace ClassLibrary
 {
     public class Demo
     {
-        public void message()
+        public void message ()
         {
             Console.WriteLine("I am Great");
         }
+
     }
 }

@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="ClassLibrary">
       <HintPath>..\..\ClassLibrary\ClassLibrary\bin\Debug\net6.0\ClassLibrary.dll</HintPath>
     </Reference>
