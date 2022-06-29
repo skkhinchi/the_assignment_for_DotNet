@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassLibrary
 {
-    public class Demo
+    public class LengthHelper
     {
-        public void message()
+        public int findLength(string a)
         {
-            Console.WriteLine("I am Great");
+            return a.Length;
         }
-
     }
 }
