@@ -12,7 +12,7 @@ namespace ConsoleAppForClassLibrary
 
 
             LengthHelper obj2 = new LengthHelper();
-            Console.WriteLine(obj2.findLength("Sumit"));
+            Console.WriteLine(obj2.findLength("Sumitkhinchi"));
 
             Console.Read();
         }
