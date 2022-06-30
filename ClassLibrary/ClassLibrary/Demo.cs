@@ -8,9 +8,14 @@ namespace ClassLibrary
 {
     public class Demo
     {
+        //C# uses PascalCase for declaration
         public void Message ()
         {
             Console.WriteLine("I am Great");
+        }
+        public void Display()
+        {
+            Console.WriteLine("then I am Pro");
         }
 
     }
