@@ -8,7 +8,7 @@ namespace ClassLibrary
 {
     public class LengthHelper
     {
-        public int findLength(string a)
+        public int FindLength(string a)
         {
             return a.Length;
         }
