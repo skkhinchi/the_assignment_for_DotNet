@@ -8,7 +8,7 @@ namespace ClassLibrary
 {
     public class Demo
     {
-        public void message ()
+        public void Message ()
         {
             Console.WriteLine("I am Great");
         }
