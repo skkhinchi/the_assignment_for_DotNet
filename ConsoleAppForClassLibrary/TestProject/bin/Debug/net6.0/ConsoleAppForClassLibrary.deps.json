@@ -8,15 +8,19 @@
     ".NETCoreApp,Version=v6.0": {
       "ConsoleAppForClassLibrary/1.0.0": {
         "dependencies": {
-          "ClassLibrary": "1.0.0"
+          "ClassLibrary": "1.0.0",
+          "ClassLibrary.Reference": "1.0.0.0"
         },
         "runtime": {
           "ConsoleAppForClassLibrary.dll": {}
         }
       },
-      "ClassLibrary/1.0.0": {
+      "ClassLibrary.Reference/1.0.0.0": {
         "runtime": {
-          "ClassLibrary.dll": {}
+          "ClassLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
@@ -27,8 +31,8 @@
       "serviceable": false,
       "sha512": ""
     },
-    "ClassLibrary/1.0.0": {
-      "type": "project",
+    "ClassLibrary.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

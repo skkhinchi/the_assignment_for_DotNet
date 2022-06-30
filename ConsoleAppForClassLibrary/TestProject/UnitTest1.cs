@@ -10,21 +10,21 @@ namespace TestProject
         [Fact]
         public void Test1()
         {
-            Assert.Equal(0, obj1.findLength(""));
+            Assert.Equal(0, obj1.FindLength(""));
 
         }
 
         [Fact]
         public void Test2()
         {       
-           Assert.Equal(3, obj1.findLength("123"));
+           Assert.Equal(3, obj1.FindLength("123"));
           
         }
 
         [Fact]
         public void Test3()
         { 
-            Assert.Equal(11, obj1.findLength("12345678910"));
+            Assert.Equal(11, obj1.FindLength("12345678910"));
         }
        
         [Fact]
