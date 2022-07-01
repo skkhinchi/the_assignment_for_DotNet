@@ -13,6 +13,7 @@ namespace TestProject
          [Fact]
         public void TestIncrement()
         {
+
             Assert.NotEqual(Counter.Instance.Increment(), Counter.Instance.Increment());
 
         }
@@ -20,13 +21,6 @@ namespace TestProject
         public void TestIncrement2()
         {
             Assert.Equal(Counter.Instance.Increment()+1, Counter.Instance.Increment());
-
-        }
-
-        [Fact]
-        public void TestDecrement()
-        {
-            Assert.NotEqual(Counter.Instance.Increment() , Counter.Instance.Increment());
 
         }
 
