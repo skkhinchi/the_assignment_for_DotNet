@@ -39,10 +39,49 @@ namespace ConsoleAppForClassLibrary
     {       
       
         static void Main(string[] args)
-        {        
+        {
+          
+            Console.WriteLine("--------------------------------Assignment_1&2");
+            Demo obj1 = new Demo();
+            obj1.Message();
+            obj1.Display();
+            LengthHelper obj2 = new LengthHelper();
+            Console.WriteLine(obj2.FindLength("Sumitkhinchi"));
+
+
+            Console.WriteLine("--------------------------------Assignment_3");
+            Console.WriteLine("Now increment method will call 2 times");
+            Counter.Instance.Increment();
+            Counter.Instance.Print();
+            Counter.Instance.Increment();
+            Counter.Instance.Print();
+            Console.WriteLine("Now Decrement method will call");
+            Counter.Instance.Decrement();
+            Counter.Instance.Print();
+
+            // Assignment_4_Extension method concept
+            Console.WriteLine("--------------------------------Assignment_4");
+            try
+            {
+                string test = "12345";
+                test.ToCurrency();
+                //string test1 = "Hello";
+                //test1.ToCurrency();
+
+
+            }
+            catch (someThingWentWrong e)
+            {
+                Console.WriteLine(e);
+            }
+
+
+
             Console.WriteLine("--------------------------------Weekend_Assignment");
             ConsoleReader obj3 = new ConsoleReader();
             obj3.Run();
+
+
 
         }
     }
