@@ -54,7 +54,7 @@ What is singleton class in C# :
 Singleton Class allow for single allocations and instances of data. It has normal methods and you can call it using an instance. To prevent multiple instances of the class, the private constructor is used.
 
 ## Assignment 4:
-> ### Extension Method: Extend the string class, add a new function called ToCurrency(). if string contains numbers, the function will prepend $ sign to and return a new string or else it will throw an exception.
+> ### Extension Method: Extend the string class, add a new function called  (). if string contains numbers, the function will prepend $ sign to and return a new string or else it will throw an exception.
 
 #### Solution : 
 Extension Method : https://www.geeksforgeeks.org/extension-method-in-c-sharp/
@@ -63,4 +63,6 @@ Extension Method : https://www.geeksforgeeks.org/extension-method-in-c-sharp/
 > - If the class is sealed than there in no concept of extending its functionality. For this a new concept is introduced, in other words extension methods.
 >- This feature is important for all developers, especially if you would like to use the dynamism of the C# enhancements in your class's design.
 
-
+## Assignment 5:
+> ### Write a class ConsoleReader that has a run function that reads input from console and calls onWord or onNumber or onJunk delegates based on the following algorithm, The console reader continously reads the input from the console using ReadLine and if it encounters a word that is group of english characters, it calls onWord.If it encounters a group of numbers, it calls onNumber and if the input has junk (non alphabet or non numbers) characters it calls onJunk. You can assume user will enter one word at a time and if the word has junk characters it will always call onJunk, if the input has both numbers and english characters, it will always call onWord, and if the input has only numbers, it will call onNumber. 
+### You have to write Unit test cases for ConsoleReader and it is implementation.
