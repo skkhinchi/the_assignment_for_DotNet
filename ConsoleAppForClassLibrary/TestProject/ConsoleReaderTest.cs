@@ -17,33 +17,31 @@ namespace TestProject
 
 
       [Fact]
-        public void Test()
+        public void TestOnWord()
         {
             Assert.Equal(obj.OnWord(), obj.Run("Hello"));
-
-           
+            Assert.NotNull(obj.Run("Hello"));
         }
         [Fact]
-        public void Test1()
+        public void TestOnNUmber()
         {
             Assert.Equal(obj.OnNumber(), obj.Run("1234"));
-
-
+            Assert.NotNull(obj.Run("12345"));
         }
         [Fact]
-        public void Test2()
+        public void TestOnJunk()
         {
             Assert.Equal(obj.OnJunk(), obj.Run("123$Hello"));
-
-
+            Assert.NotNull(obj.Run("$umit"));
         }
         [Fact]
-        public void Test3()
+        public void NullTest()
         {
             Assert.Null(obj.Run(""));
 
 
         }
+
 
 
 
