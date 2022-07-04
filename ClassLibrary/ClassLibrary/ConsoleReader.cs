@@ -9,46 +9,54 @@ namespace ClassLibrary;
 
 public class ConsoleReader
 {
-    public void Run()
-    {
-        string o = Console.ReadLine();
 
-        Regex specialChar = new Regex("[^A-Za-z0-9]");
+    public string Run(string o)
+    {
+       Regex specialChar = new Regex("[^A-Za-z0-9]");
         bool hasSpecialChars = specialChar.IsMatch(o);
         if (!string.IsNullOrEmpty(o))
         {
             int tryInt;
             if (Int32.TryParse(o, out tryInt))
             {
-                Console.WriteLine("Interger " + OnNumber(o));
-                // return OnNumber(o);
+                //Console.WriteLine("Interger " + OnNumber(o));
+                 return OnNumber();
             }
             else if (hasSpecialChars)
             {
-                Console.WriteLine("Special " + OnJunk(o));
-                // return OnJunk(o);
+               // Console.WriteLine("Special " + OnJunk(o));
+                 return OnJunk();
             }
             else
             {
-                //return OnWord(o);
-                Console.WriteLine("String " + OnWord(o));
+                return OnWord();
+               // Console.WriteLine("String " + OnWord(o));
             }
+           
+        }
+        else
+        {
+            Console.WriteLine("Soemthing went wrong");
+            return null;
         }
     }
 
 
-        public string OnNumber(string a)
+        public string OnNumber()
         {
-            return a;
+        Console.WriteLine("On Number");
+            return "Integer";
         }
-        public string OnWord(string a)
+        public string OnWord()
         {
-            return a;
+        Console.WriteLine("On String");
+        return "String";
         }
 
-        public string OnJunk(string a)
+        public string OnJunk()
         {
-            return a;
+        Console.WriteLine("On Junk");
+        return "Special";
         }
     }
 
