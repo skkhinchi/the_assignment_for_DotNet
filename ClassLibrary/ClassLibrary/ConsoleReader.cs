@@ -14,6 +14,7 @@ public class ConsoleReader
     {
        Regex specialChar = new Regex("[^A-Za-z0-9]");
         bool hasSpecialChars = specialChar.IsMatch(o);
+
         if (!string.IsNullOrEmpty(o))
         {
             int tryInt;
