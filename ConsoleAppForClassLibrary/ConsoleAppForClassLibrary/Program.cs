@@ -79,7 +79,9 @@ namespace ConsoleAppForClassLibrary
 
             Console.WriteLine("--------------------------------Weekend_Assignment");
             ConsoleReader obj3 = new ConsoleReader();
-            obj3.Run();
+            Console.WriteLine("Input : ");
+            string o = Console.ReadLine();
+            obj3.Run(o);
 
 
 
