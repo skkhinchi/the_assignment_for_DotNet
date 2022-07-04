@@ -40,7 +40,7 @@ namespace TestProject
         [Fact]
         public void Test3()
         {
-            Assert.Equal(null, obj.Run(""));
+            Assert.Null(obj.Run(""));
 
 
         }
