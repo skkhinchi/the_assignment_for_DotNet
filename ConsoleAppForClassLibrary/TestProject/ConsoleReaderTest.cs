@@ -7,6 +7,7 @@ using ClassLibrary;
 using Microsoft.VisualStudio.TestPlatform;
 using Moq;
 using static ClassLibrary.ConsoleReader;
+using static ClassLibrary.DelegatesMethods;
 
 namespace TestProject
 {
@@ -16,6 +17,8 @@ namespace TestProject
         word obj1 = new word(OnWord);
         number obj2 = new number(OnNumber);
         junk obj3 = new junk(OnJunk);
+
+       
 
         [Fact]
         public void TestOnWord()
