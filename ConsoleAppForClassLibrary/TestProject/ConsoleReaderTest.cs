@@ -26,7 +26,7 @@ namespace TestProject
         public void TestOnNUmber()
         {
             Assert.Equal(obj.OnNumber(), obj.Run("1234"));
-            Assert.NotNull(obj.Run("12345"));
+            Assert.NotNull(obj.Run("12345"));   
         }
         [Fact]
         public void TestOnJunk()

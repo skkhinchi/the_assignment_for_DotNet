@@ -1,5 +1,6 @@
 ﻿using ClassLibrary;
 
+using System.Text.RegularExpressions;
 public class someThingWentWrong : Exception
 {
     public someThingWentWrong(String errorMessage)
@@ -36,12 +37,13 @@ namespace ConsoleAppForClassLibrary
     }
 
     class Program
-    {       
+    {
       
         static void Main(string[] args)
-        {
+        {   
           
             Console.WriteLine("--------------------------------Assignment_1&2");
+            
             Demo obj1 = new Demo();
             obj1.Message();
             obj1.Display();
@@ -78,10 +80,10 @@ namespace ConsoleAppForClassLibrary
 
 
             Console.WriteLine("--------------------------------Weekend_Assignment");
-            ConsoleReader obj3 = new ConsoleReader();
+            RunClass obj4 = new RunClass();
             Console.WriteLine("Input : ");
             string o = Console.ReadLine();
-            obj3.Run(o);
+            obj4.Run(o);
 
 
 
