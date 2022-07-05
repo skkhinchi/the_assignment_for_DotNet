@@ -6,32 +6,33 @@ using System.Threading.Tasks;
 using ClassLibrary;
 using Microsoft.VisualStudio.TestPlatform;
 using Moq;
-
-
+using static ClassLibrary.ConsoleReader;
 
 namespace TestProject
 {
     public class ConsoleReaderTest
     {
         ConsoleReader obj = new ConsoleReader();
+        word obj1 = new word(OnWord);
+        number obj2 = new number(OnNumber);
+        junk obj3 = new junk(OnJunk);
 
-
-      [Fact]
+        [Fact]
         public void TestOnWord()
         {
-            Assert.Equal(obj.OnWord(), obj.Run("Hello"));
+            Assert.Equal(obj1(), obj.Run("Hello"));
             Assert.NotNull(obj.Run("Hello"));
         }
         [Fact]
         public void TestOnNUmber()
         {
-            Assert.Equal(obj.OnNumber(), obj.Run("1234"));
-            Assert.NotNull(obj.Run("12345"));
+            Assert.Equal(obj2(), obj.Run("1234"));
+            Assert.NotNull(obj.Run("12345"));   
         }
         [Fact]
         public void TestOnJunk()
         {
-            Assert.Equal(obj.OnJunk(), obj.Run("123$Hello"));
+            Assert.Equal(obj3(), obj.Run("123$Hello"));
             Assert.NotNull(obj.Run("$umit"));
         }
         [Fact]

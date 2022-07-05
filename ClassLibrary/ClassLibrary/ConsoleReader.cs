@@ -9,54 +9,65 @@ namespace ClassLibrary;
 
 public class ConsoleReader
 {
+    public delegate string word();
+    public delegate string number();
+    public delegate string junk();
+
+    public static string OnNumber()
+    {
+        Console.WriteLine("On Number");
+        return "Integer";
+    }
+    public static string  OnWord()
+    {
+        Console.WriteLine("On String");
+        return "String";
+    }
+
+    public static string OnJunk()
+    {
+        Console.WriteLine("On Junk");
+        return "Special";
+    }
 
     public string Run(string o)
     {
-       Regex specialChar = new Regex("[^A-Za-z0-9]");
+
+        word obj1 = new word(OnWord);
+        number obj2 = new number(OnNumber);
+        junk obj3 = new junk(OnJunk);
+
+        Regex specialChar = new Regex("[^A-Za-z0-9]");
         bool hasSpecialChars = specialChar.IsMatch(o);
+
         if (!string.IsNullOrEmpty(o))
         {
             int tryInt;
             if (Int32.TryParse(o, out tryInt))
             {
                 //Console.WriteLine("Interger " + OnNumber(o));
-                 return OnNumber();
+                obj2();
             }
             else if (hasSpecialChars)
             {
-               // Console.WriteLine("Special " + OnJunk(o));
-                 return OnJunk();
+                // Console.WriteLine("Special " + OnJunk(o));
+                obj3();
             }
             else
             {
-                return OnWord();
-               // Console.WriteLine("String " + OnWord(o));
+                obj1();
+                // Console.WriteLine("String " + OnWord(o));
             }
-           
+
         }
-        else
-        {
-            Console.WriteLine("Soemthing went wrong");
-            return null;
-        }
+        return null;
+
+
+
+       
     }
 
 
-        public string OnNumber()
-        {
-        Console.WriteLine("On Number");
-            return "Integer";
-        }
-        public string OnWord()
-        {
-        Console.WriteLine("On String");
-        return "String";
-        }
 
-        public string OnJunk()
-        {
-        Console.WriteLine("On Junk");
-        return "Special";
-        }
-    }
+}
 
