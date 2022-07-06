@@ -4,12 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary
+namespace ConsoleAppForClassLibrary
 {
     public class DelegatesMethods
     {
-
-       
 
         public static string OnNumber()
         {
@@ -30,4 +28,5 @@ namespace ClassLibrary
 
 
     }
+
 }

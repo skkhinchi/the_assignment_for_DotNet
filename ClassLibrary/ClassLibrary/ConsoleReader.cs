@@ -8,14 +8,16 @@ using static ClassLibrary.DelegatesMethods;
 
 namespace ClassLibrary;
 
+public delegate string word();
+public delegate string number();
+public delegate string junk();
 public class ConsoleReader
 {
-    public string Run(string o)
+  
+    public string Run(string o,word w, number n, junk j)
     {
 
-        word obj1 = new word(OnWord);
-        number obj2 = new number(OnNumber);
-        junk obj3 = new junk(OnJunk);
+        
 
         Regex specialChar = new Regex("[^A-Za-z0-9]");
         bool hasSpecialChars = specialChar.IsMatch(o);
@@ -26,16 +28,16 @@ public class ConsoleReader
             if (Int32.TryParse(o, out tryInt))
             {
                 //Console.WriteLine("Interger " + OnNumber(o));
-                obj2();
+               n();
             }
             else if (hasSpecialChars)
             {
                 // Console.WriteLine("Special " + OnJunk(o));
-                obj3();
+                j();
             }
             else
             {
-                obj1();
+                w();
                 // Console.WriteLine("String " + OnWord(o));
             }
 
