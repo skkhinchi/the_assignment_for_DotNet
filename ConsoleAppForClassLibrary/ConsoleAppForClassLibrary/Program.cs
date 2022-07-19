@@ -13,9 +13,9 @@
              Console.Write("Write input continuously: ");
             while ((o = Console.ReadLine()) != null)
             {
-                 // Console.WriteLine("Input : ");
+                // Console.WriteLine("Input : ");
                 //string o = Console.ReadLine();
-                obj.Run(o, DelegatesMethods.OnWord, DelegatesMethods.OnNumber, DelegatesMethods.OnJunk);
+                obj.Run(o, DelegatesMethods.OnWord , DelegatesMethods.OnNumber, DelegatesMethods.OnJunk);
             }
         }
     }

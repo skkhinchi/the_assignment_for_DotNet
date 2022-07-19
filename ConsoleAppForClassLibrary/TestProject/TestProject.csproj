@@ -30,6 +30,9 @@
     <Reference Include="ClassLibrary">
       <HintPath>..\..\ClassLibrary\ClassLibrary\bin\Debug\net6.0\ClassLibrary.dll</HintPath>
     </Reference>
+    <Reference Include="ConsoleAppForClassLibrary">
+      <HintPath>..\ConsoleAppForClassLibrary\bin\Debug\net6.0\ConsoleAppForClassLibrary.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
 </Project>

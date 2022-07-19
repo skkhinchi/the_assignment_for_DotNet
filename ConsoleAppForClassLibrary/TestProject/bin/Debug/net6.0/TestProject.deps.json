@@ -14,7 +14,8 @@
           "coverlet.collector": "3.1.2",
           "xunit": "2.4.1",
           "xunit.runner.visualstudio": "2.4.3",
-          "ClassLibrary.Reference": "1.0.0.0"
+          "ClassLibrary.Reference": "1.0.0.0",
+          "ConsoleAppForClassLibrary.Reference": "1.0.0.0"
         },
         "runtime": {
           "TestProject.dll": {}
@@ -1131,17 +1132,17 @@
         }
       },
       "xunit.runner.visualstudio/2.4.3": {},
-      "ConsoleAppForClassLibrary/1.0.0": {
-        "dependencies": {
-          "ClassLibrary": "1.0.0"
-        },
-        "runtime": {
-          "ConsoleAppForClassLibrary.dll": {}
-        }
-      },
       "ClassLibrary.Reference/1.0.0.0": {
         "runtime": {
           "ClassLibrary.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "ConsoleAppForClassLibrary.Reference/1.0.0.0": {
+        "runtime": {
+          "ConsoleAppForClassLibrary.dll": {
             "assemblyVersion": "1.0.0.0",
             "fileVersion": "1.0.0.0"
           }
@@ -1820,12 +1821,12 @@
       "path": "xunit.runner.visualstudio/2.4.3",
       "hashPath": "xunit.runner.visualstudio.2.4.3.nupkg.sha512"
     },
-    "ConsoleAppForClassLibrary/1.0.0": {
-      "type": "project",
+    "ClassLibrary.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
-    "ClassLibrary.Reference/1.0.0.0": {
+    "ConsoleAppForClassLibrary.Reference/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
